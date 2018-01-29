@@ -13,8 +13,8 @@ class conta
 //private bloqueia a criacao de new conta fora da classe,p isso tem que criar ometodo
   private function __construct()
   {
-
-    self::$contador++;
+    $contador = ++self::$contador;
+    $this->numero = $contador;
     //echo "Conta $numero / Contador:" . conta::$contador . PHP_EOL;
   }
 
@@ -23,4 +23,5 @@ class conta
   {
     return new conta();
   }
+
 }
